@@ -8,18 +8,15 @@ namespace BjyProfiler\Db\Adapter;
 
 
 use BjyProfiler\Db\Profiler\Profiler;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class ProfilingAdapterFactory implements FactoryInterface
+class ProfilingAdapterFactory implements \Zend\ServiceManager\Factory\FactoryInterface
 {
-
-    /**
-     * @param ServiceLocatorInterface $serviceLocator
-     * @return mixed
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
+	/**
+	 * (non-PHPdoc)
+	 * @see \Zend\ServiceManager\Factory\FactoryInterface::__invoke()
+	 */
+	public function __invoke(\Interop\Container\ContainerInterface $serviceLocator, $requestedName, array $options = null)
+	{
         $config = $serviceLocator->get('Configuration');
         $dbParams = $config['db'];
         $adapter = new ProfilingAdapter($dbParams);
