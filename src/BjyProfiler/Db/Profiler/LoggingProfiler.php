@@ -8,7 +8,7 @@
 namespace BjyProfiler\Db\Profiler;
 
 
-use Zend\Log\Logger;
+use Laminas\Log\Logger;
 
 class LoggingProfiler extends Profiler
 {
@@ -111,7 +111,7 @@ class LoggingProfiler extends Profiler
     }
 
     /**
-     * @param \Zend\Log\Logger $logger
+     * @param \Laminas\Log\Logger $logger
      */
     public function setLogger(Logger $logger)
     {
@@ -119,7 +119,7 @@ class LoggingProfiler extends Profiler
     }
 
     /**
-     * @return \Zend\Log\Logger
+     * @return \Laminas\Log\Logger
      */
     public function getLogger()
     {

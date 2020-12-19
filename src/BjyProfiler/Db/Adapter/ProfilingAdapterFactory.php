@@ -9,11 +9,11 @@ namespace BjyProfiler\Db\Adapter;
 
 use BjyProfiler\Db\Profiler\Profiler;
 
-class ProfilingAdapterFactory implements \Zend\ServiceManager\Factory\FactoryInterface
+class ProfilingAdapterFactory implements \Laminas\ServiceManager\Factory\FactoryInterface
 {
 	/**
 	 * (non-PHPdoc)
-	 * @see \Zend\ServiceManager\Factory\FactoryInterface::__invoke()
+	 * @see \Laminas\ServiceManager\Factory\FactoryInterface::__invoke()
 	 */
 	public function __invoke(\Interop\Container\ContainerInterface $serviceLocator, $requestedName, array $options = null)
 	{

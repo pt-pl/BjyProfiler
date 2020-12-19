@@ -2,7 +2,7 @@
 
 namespace BjyProfiler\Db\Profiler;
 
-use Zend\Db\Adapter\Profiler\ProfilerInterface;
+use Laminas\Db\Adapter\Profiler\ProfilerInterface;
 
 class Profiler implements ProfilerInterface
 {
